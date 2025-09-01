@@ -169,10 +169,11 @@ const StyledWrapper = styled.div`
     position: absolute;
     top: 6px;
     left: 8px;
-    width: 8px;
-    height: 8px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
     box-shadow: 0 0 0 2px #ffffff;
+    z-index: 6;
   }
   .card .image-container .status-dot.online { background: #22c55e; }
   .card .image-container .status-dot.offline { background: #9ca3af; }
