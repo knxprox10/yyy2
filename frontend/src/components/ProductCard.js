@@ -13,7 +13,9 @@ const ProductCard = () => {
         <div className="image-container">
           {/* Online status indicator (dot) */}
           <span className="status-dot" aria-label={isOnline ? 'online' : 'offline'} style={{ background: isOnline ? '#22c55e' : '#ef4444' }} />
-          {/* Toggle removed: only one status indicator controlled by Buy Now button */}
+          <div className="toggle-wrapper">
+            <ToggleButton checked={isOnline} onChange={(e) => setIsOnline(e.target.checked)} />
+          </div>
           <svg viewBox="0 0 1921 1081" xmlnsXlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" className="svg">
             <defs>
               <radialGradient gradientUnits="objectBoundingBox" gradientTransform="translate(0.219) scale(0.563 1)" r="1.204" cy="0.5" cx="0.5" id="radial-gradient">
