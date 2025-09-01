@@ -130,6 +130,39 @@ const ProductCard = () => {
               <path fill="#e9e9e9" transform="translate(82.431 -1.047)" d="M9.357,1.558,11.282,5.45a.919.919,0,0,0,.692.5l4.3.624a.916.916,0,0,1,.509,1.564l-3.115,3.029a.916.916,0,0,0-.264.812l.735,4.278a.919.919,0,0,1-1.334.967l-3.85-2.02a.922.922,0,0,0-.855,0l-3.85,2.02a.919.919,0,0,1-1.334-.967l.735-4.278a.916.916,0,0,0-.264-.812L.279,8.14A.916.916,0,0,1,.789,6.576l4.3-.624a.919.919,0,0,0,.692-.5L7.71,1.558A.92.92,0,0,1,9.357,1.558Z" data-name="star-svgrepo-com" id="star-svgrepo-com-5" />
             </svg>
             (29,062)
+        {showOverlay && (
+          <div className="overlay">
+            <div className="overlay-content">
+              <div className="overlay-header">
+                <span className="overlay-title">طرق الدفع المتاحة</span>
+                <button className="overlay-close" onClick={() => setShowOverlay(false)} aria-label="close">×</button>
+              </div>
+              <ul className="overlay-icons">
+                <li className="payment-card visa" aria-label="Visa">
+                  <div className="card-icon real-icon visa"><SiVisa size={28} color="#1434CB"/></div>
+                </li>
+                <li className="payment-card mastercard" aria-label="Mastercard">
+                  <svg viewBox="0 0 60 36" className="card-icon real-icon mastercard" role="img" aria-label="Mastercard">
+                    <rect width="60" height="36" rx="6" fill="#ffffff"/>
+                    <circle cx="27" cy="18" r="10" fill="#EB001B"/>
+                    <circle cx="33" cy="18" r="10" fill="#F79E1B"/>
+                  </svg>
+                </li>
+                <li className="payment-card google" aria-label="Google Pay">
+                  <div className="card-icon real-icon google"><SiGooglepay size={28} color="#4285F4"/></div>
+                </li>
+                <li className="payment-card paypal" aria-label="PayPal">
+                  <div className="card-icon real-icon paypal"><SiPaypal size={28} color="#003087"/></div>
+                </li>
+                {/* مكان بطاقات أخرى لاحقاً */}
+                <li className="payment-card placeholder" aria-label="More soon">
+                  <div className="card-icon real-icon" style={{opacity:0.6}}>...</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        )}
+
           </div>
         </div>
 
