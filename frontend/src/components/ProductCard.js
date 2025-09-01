@@ -83,8 +83,8 @@ const ProductCard = () => {
           </svg>
           
         </div>
-        <label className="favorite">
-          <input type="checkbox" />
+        <label className="favorite" aria-label="status-light">
+          <input type="checkbox" checked={isOnline} onChange={(e) => setIsOnline(e.target.checked)} />
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#000000">
             <circle cx="12" cy="12" r="10"/>
           </svg>
