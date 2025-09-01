@@ -207,13 +207,7 @@ const StyledWrapper = styled.div`
     box-shadow: rgba(100, 100, 111, 0.2) 0px 0px 15px 0px;
   }
 
-  /* Place toggle inside price bubble position */
-  .card .image-container .toggle-wrapper {
-    position: absolute;
-    left: 20px;
-    bottom: -20px;
-    z-index: 4;
-  }
+  /* toggle-wrapper removed */
 
   .card .favorite {
     position: absolute;
