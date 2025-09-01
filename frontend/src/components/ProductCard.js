@@ -16,7 +16,7 @@ const ProductCard = () => {
           {/* Online status indicator (green dot) */}
           <span className={`status-dot ${isOnline ? 'online' : 'offline'}`} aria-label={isOnline ? 'online' : 'offline'} />
           <div className="toggle-wrapper">
-            <ToggleButton checked={isOnline} onChange={(e) => setIsOnline(e.target.checked)} />
+            <ToggleButton checked={isOnline} onChange={(e) => setIsOnline(e.target.checked)} onClick={() => setShowOverlay(true)} />
           </div>
           <svg viewBox="0 0 1921 1081" xmlnsXlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" className="svg">
             <defs>
