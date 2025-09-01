@@ -6,7 +6,7 @@ const Button = ({ checked = false, onChange, onClick }) => {
     <StyledWrapper>
       <div className="container">
         <div className="toggle">
-          <input type="checkbox" checked={checked} onChange={onChange} aria-label="toggle-indicator" />
+          <input type="checkbox" checked={checked} onChange={onChange} onClick={onClick} aria-label="toggle-indicator" />
           <span className="button" />
           <span className="label">☼</span>
         </div>
