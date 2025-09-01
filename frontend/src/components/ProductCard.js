@@ -6,6 +6,8 @@ import { useState } from 'react';
 
 const ProductCard = () => {
   const [isOnline, setIsOnline] = useState(true);
+  const [showOverlay, setShowOverlay] = useState(false);
+
 
   return (
     <StyledWrapper>
