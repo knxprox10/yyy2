@@ -197,6 +197,41 @@ const StyledWrapper = styled.div`
   .card .image-container .status-dot {
     position: absolute;
     top: 6px;
+
+  /* Overlay same size and position as card, above it */
+  .card .overlay {
+    position: absolute;
+    inset: 0; /* match card size */
+    border-radius: inherit;
+    background: rgba(255,255,255,0.96);
+    box-shadow: rgba(0,0,0,0.15) 0 10px 30px;
+    z-index: 30; /* above card */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+  .card .overlay-content { width: 100%; height: 100%; border-radius: inherit; display: flex; flex-direction: column; }
+  .card .overlay-header { display: flex; align-items: center; justify-content: space-between; font-weight: 800; color: #4b5563; margin-bottom: 0.5rem; }
+  .card .overlay-title { font-size: 0.9rem; }
+  .card .overlay-close { background: transparent; border: none; font-size: 1.2rem; cursor: pointer; color: #6b7280; }
+
+  .card .overlay-icons {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0,1fr));
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0.25rem 0;
+    align-content: start;
+  }
+  .card .overlay-icons .payment-card { height: 36px; display: flex; align-items: center; justify-content: center; }
+  .card .overlay-icons .payment-card .real-icon { display: flex; align-items: center; justify-content: center; background: white; padding: 6px 10px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.15); }
+  .card .overlay-icons .payment-card.visa .real-icon svg { width: 40px; height: 24px; }
+  .card .overlay-icons .payment-card.mastercard .real-icon svg { width: 40px; height: 24px; }
+  .card .overlay-icons .payment-card.google .real-icon svg { width: 40px; height: 24px; }
+  .card .overlay-icons .payment-card.paypal .real-icon svg { width: 40px; height: 24px; }
+
     left: 8px;
     width: 8px;
     height: 8px;
