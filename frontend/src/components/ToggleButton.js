@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Button = ({ checked = false, onChange }) => {
+const Button = ({ checked = false, onChange, onClick }) => {
   return (
     <StyledWrapper>
       <div className="container">
