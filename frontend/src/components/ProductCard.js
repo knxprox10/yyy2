@@ -83,6 +83,12 @@ const ProductCard = () => {
           </svg>
           
         </div>
+        <label className="favorite">
+          <input defaultChecked type="checkbox" />
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#000000">
+            <circle cx="12" cy="12" r="10"/>
+          </svg>
+        </label>
         <div className="content">
           <div className="brand">بطائق إلكترونية مسبقة الدفع</div>
           <div className="product-name">بطاقة دفع رقمية جاهزة للاستخدام الفوري</div>
