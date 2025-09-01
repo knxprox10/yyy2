@@ -186,7 +186,12 @@ const StyledWrapper = styled.div`
     border-radius: inherit;
   }
 
-  /* toggle-wrapper removed */
+  .card .image-container .toggle-wrapper {
+    position: absolute;
+    left: 20px;
+    bottom: -20px;
+    z-index: 4;
+  }
 
   .card .image-container .price {
     position: absolute;
