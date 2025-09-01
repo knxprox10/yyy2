@@ -344,39 +344,7 @@ const StyledWrapper = styled.div`
     height: 12px;
   }
 
-  .card .button-container {
-    display: flex;
-    gap: 0.3rem;
-  }
 
-  .card .button-container .button {
-    border-radius: 1.4rem 1.4rem 0.7rem 0.7rem;
-    border: none;
-    padding: 0.5rem 0;
-    background: var(--accent-color);
-    color: white;
-    font-weight: 900;
-    cursor: pointer;
-  }
-
-  .card .button-container .button:hover {
-    background: orangered;
-  }
-
-  .card .button-container .buy-button {
-    flex: auto;
-  }
-
-  .card .button-container .cart-button {
-    display: grid;
-    place-content: center;
-    width: 50px;
-  }
-
-  .card .button-container .cart-button svg {
-    width: 15px;
-    fill: white;
-  }
 
   .card:hover {
     transform: scale(1.03);
