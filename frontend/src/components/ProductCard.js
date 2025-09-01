@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { SiVisa, SiMastercard, SiGooglepay, SiPaypal } from 'react-icons/si';
-import ToggleButton from './ToggleButton';
+// ToggleButton removed as per requirement: single indicator controlled by Buy Now
 import { useState } from 'react';
 
 const ProductCard = () => {
