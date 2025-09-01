@@ -201,17 +201,13 @@ const StyledWrapper = styled.div`
   /* Overlay same size and position as card, above it */
   .card .overlay {
     position: absolute;
-    inset: 0; /* match card size */
+    top: 0; right: 0; bottom: 0; left: 0; /* EXACTLY same size as card */
     border-radius: inherit;
-    background: rgba(255,255,255,0.96);
-    box-shadow: rgba(0,0,0,0.15) 0 10px 30px;
-    z-index: 30; /* above card */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
+    background: rgba(255,255,255,0.98);
+    z-index: 999; /* ensure above everything in the card */
+    padding: 0; /* no internal padding so overlay equals card size */
   }
-  .card .overlay-content { width: 100%; height: 100%; border-radius: inherit; display: flex; flex-direction: column; }
+  .card .overlay-content { position: absolute; top:0; right:0; bottom:0; left:0; border-radius: inherit; display: flex; flex-direction: column; padding: 0.8rem; }
   .card .overlay-header { display: flex; align-items: center; justify-content: space-between; font-weight: 800; color: #4b5563; margin-bottom: 0.5rem; }
   .card .overlay-title { font-size: 0.9rem; }
   .card .overlay-close { background: transparent; border: none; font-size: 1.2rem; cursor: pointer; color: #6b7280; }
